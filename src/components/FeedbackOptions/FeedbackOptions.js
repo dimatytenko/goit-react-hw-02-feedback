@@ -1,22 +1,23 @@
 import PropTypes from 'prop-types';
-import style from './Feeedback.module.scss';
+// import style from './Feeedback.module.scss';
+
+import { FeedbackBox, FeedbackButton } from './Feedback.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div className={style.FeedbackOptions}>
+    <FeedbackBox>
       {options.map(option => {
         return (
-          <button
+          <FeedbackButton
             key={option}
             type="button"
-            className={style.FeedbackOptions__button}
             onClick={() => onLeaveFeedback(option)}
           >
             {option}
-          </button>
+          </FeedbackButton>
         );
       })}
-    </div>
+    </FeedbackBox>
   );
 };
 export default FeedbackOptions;

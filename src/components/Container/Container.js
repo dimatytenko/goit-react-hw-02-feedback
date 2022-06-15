@@ -1,7 +1,8 @@
-import s from './Container.module.scss';
+// import s from './Container.module.scss';
+import { AppContainer } from './Container.styled';
 
 function Container({ children }) {
-  return <div className={s.Container}>{children}</div>;
+  return <AppContainer>{children}</AppContainer>;
 }
 
 export default Container;
